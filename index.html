@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakery Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="name">Bakery Management System</div>
+        <div class="more-options">&#x22EE;
+            <div class="dropdown-content">
+                <a href="#" onclick="showPopup('menuPopup')">Update Menu</a>
+                <a href="#" onclick="showPopup('stockPopup')">Update Stocks</a>
+                <a href="#" onclick="resetSystem()">Reset</a>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="menu-container">
+            <h2>Menu</h2>
+            <div class="menu"></div>
+        </div>
+        <div class="order">
+            <h2>Order</h2>
+            <div id="orderContainer">
+                <select name="item" onchange="updatePrice(this)">
+                    <option value="">Select Item</option>
+                </select>
+                <input type="number" placeholder="Quantity" name="quantity" oninput="updatePrice(this)">
+                <span class="price"></span>
+            </div>
+            <button onclick="addOrderFields()">More</button>
+            <button onclick="placeOrder()">Order</button>
+        </div>
+    </div>
+
+    <div class="popup" id="menuPopup">
+        <h2>Update Menu</h2>
+        <div id="inputContainer">
+            <input type="text" placeholder="Item" name="item">
+            <input type="text" placeholder="Price" name="price">
+            <input type="text" placeholder="Stock" name="stock">
+        </div>
+        <button onclick="addMoreFields()">More</button>
+        <button onclick="submitMenu()">Submit</button>
+        <button onclick="closePopup('menuPopup')">Close</button>
+    </div>
+
+    <div class="popup" id="stockPopup">
+        <h2>Update Stock</h2>
+        <select id="stockItemSelect">
+            <option value="">Select Item</option>
+        </select>
+        <input type="number" placeholder="Quantity" id="stockQuantityInput">
+        <button onclick="submitStock()">Submit</button>
+        <button onclick="closePopup('stockPopup')">Close</button>
+    </div>
+
+    <div class="popup" id="orderPopup">
+        <h2>Order Summary</h2>
+        <div id="orderSummary"></div>
+        <button onclick="closeOrderPopup()">Close</button>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
