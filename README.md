@@ -90,7 +90,7 @@ Contributions are always welcome! Feel free to fork this repository, make change
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is open source.To view the project click on https://codepen.io/AbhaySuryaKS/pen/RNbLQdj
 
 ## Acknowledgments
 
