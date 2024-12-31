@@ -70,11 +70,11 @@ Bakery Management System/
 ### Steps
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/bakery-management-system.git
+   git clone https://github.com/AbhaySuryaKS/Bakery-Management-System.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd bakery-management-system
+   cd Bakery-Management-System
    ```
 3. Open the `index.html` file in a browser to start using the application.
 
